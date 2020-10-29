@@ -54,7 +54,8 @@ public class Triangle extends Shape {
     @Override
     public String toString(){
         String str = "Triangle\n";
-        str += super.toString() + "\n";
+        str += ("(x1,y1) = (" + xPos + ", " + yPos + ") " + "(x2,y2) = (" + x2 + ", " + y2 + ") " + "(x3,y3) = (" + x3 + ", " + y3 + ") \n");
+        str += "Area: " + area() + "\n";
         str += "Permieter: " + perimeter();
         return str;
         

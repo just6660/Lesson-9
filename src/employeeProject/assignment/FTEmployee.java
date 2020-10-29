@@ -12,11 +12,14 @@ public class FTEmployee extends Employee {
     //complete getPay
     @Override
     public double getPay(){
-        
-        //update totalPay
-        //over 40 hours is oduble the rate
-        totalPay+=1; //change this
-        return 0;
+        double pay;
+        boolean noovertime = hours <=40;
+        if(noovertime)
+            pay = rate*hours;
+        else
+            pay = (hours-40) * (rate *2) + rate * 40;
+        totalPay+=pay;
+        return pay;
     }
     
 }

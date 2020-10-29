@@ -27,11 +27,11 @@ public abstract class Employee {
     }
 
     public static String getRateRules() {
-        return "between " + MIN_RATE + " and" + MAX_RATE;
+        return "between " + MIN_RATE + " and " + MAX_RATE;
     }
 
     public static String getHoursRules() {
-        return "between " + MIN_HOURS + " and" + MAX_HOURS;
+        return "between " + MIN_HOURS + " and " + MAX_HOURS;
     }
     
     public static double getTotalPay(){
