@@ -4,14 +4,12 @@ import TurtleGraphics.Pen;
 
 public class Triangle extends Shape {
     
-    private double x1,x2,x3,y1,y2,y3; 
+    private double x2,x3,y2,y3; 
     
     public Triangle(){
         super();
-        x1 = xPos;
         x2 = 0;
-        x3 = 0;
-        y1 = yPos; 
+        x3 = 0;     
         y2 = 0;
         y3 = 0;
     }
@@ -26,7 +24,7 @@ public class Triangle extends Shape {
 
     @Override
     public double area() {
-        return Math.abs((x1*y2-x2*y1) + (x2*y3-x3*y2) + (x3*y1-x1*y3))/2;
+        return Math.abs((xPos*y2-x2*yPos) + (x2*y3-x3*y2) + (x3*yPos-xPos*y3))/2;
     }
 
     @Override
@@ -49,7 +47,7 @@ public class Triangle extends Shape {
 
     @Override
     public double perimeter() {
-       return Math.sqrt((x1-x2)*(x1-x2) + (y1-y2) * (y1-y2));
+       return Math.sqrt((xPos-x2)*(xPos-x2) + (yPos-y2) * (yPos-y2));
     }
     @Override
     public String toString(){
